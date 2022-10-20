@@ -1,0 +1,1 @@
+Matricula: 735102	Tempo de execucao: 0.008s.	Comparacoes: 608
