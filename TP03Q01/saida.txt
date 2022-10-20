@@ -1,0 +1,39 @@
+public void sortByName(){
+        for (int i = 0; i < (n - 1); i++) {
+            int menor = i;
+            for (int j = (i + 1); j < n && (int)filmes[menor].getTituloOriginal().charAt(0) == (int)filmes[j].getTituloOriginal().charAt(0); j++){
+                comparacoes++;
+                //MyIO.println(filmes[menor].getNome() + " COMPARAR COM " + filmes[j].getNome());
+                if ((int)filmes[menor].getNome().charAt(0) > (int)filmes[j].getNome().charAt(0)){
+                    menor = j;
+                }else if (filmes[menor].getNome().charAt(0) == filmes[j].getNome().charAt(0)){
+                    if((int)filmes[menor].getNome().charAt(1) > (int)filmes[j].getNome().charAt(1)){
+                        menor = j;
+                        comparacoes += 2;
+                    }else if((int)filmes[menor].getNome().charAt(1) == (int)filmes[j].getNome().charAt(1)){
+                        if((int)filmes[menor].getNome().charAt(2) > (int)filmes[j].getNome().charAt(2)){
+                            menor = j;
+                            comparacoes += 2;
+                        }else if((int)filmes[menor].getNome().charAt(2) == (int)filmes[j].getNome().charAt(2)){
+                            if((int)filmes[menor].getNome().charAt(3) > (int)filmes[j].getNome().charAt(3)){
+                                menor = j;
+                                comparacoes += 2;
+                            }else if((int)filmes[menor].getNome().charAt(3) == (int)filmes[j].getNome().charAt(3)){
+                                if((int)filmes[menor].getNome().charAt(4) > (int)filmes[j].getNome().charAt(4)){
+                                    menor = j;
+                                    comparacoes += 2;
+                                }else if((int)filmes[menor].getNome().charAt(4) == (int)filmes[j].getNome().charAt(4)){
+                                    if((int)filmes[menor].getNome().charAt(5) > (int)filmes[j].getNome().charAt(5)){
+                                        menor = j;
+                                        comparacoes += 2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+            swap(menor, i);
+            movimentacoes+=3;
+        } 
+   }
